@@ -1,0 +1,73 @@
+.blog_wrapper {
+  height: 500px;
+  width: 350px;
+  position: relative;
+  margin: 1em 0.5em;
+  border-radius: 0.3em;
+  box-shadow: 0px 0px 3px 3px #ddd;
+  overflow: hidden;
+  border-bottom: 5px solid rgb(7, 124, 60);
+  transition: all 0.2s ease-in;
+}
+.blog_wrapper:hover {
+  box-shadow: 5px 5px 3px 3px #999;
+}
+@media screen and (min-width: 800px) {
+  .blog_wrapper {
+    margin: 2em 2em;
+  }
+}
+.image {
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+  position: relative;
+}
+.image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.blog_body {
+  height: 200px;
+  width: 350px;
+  padding: 1em;
+}
+.title {
+  font-size: 2em;
+  color: #000;
+  font-weight: 800;
+  margin-top: 0.5em;
+}
+.tags {
+  color: #666;
+  font-size: small;
+  font-style: italic;
+  margin: 0em 0em;
+}
+.description {
+  word-wrap: normal;
+  margin-bottom: 0.5em;
+  color: #111;
+}
+.delete {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  color: #222;
+  font-size: 1em;
+  background: none;
+  outline: none;
+  border: none;
+}
+.delete:hover {
+  color: red;
+}
